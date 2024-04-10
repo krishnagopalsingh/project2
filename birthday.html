@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Wishes Card</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        width: 300px;
+    }
+    .input-field {
+        margin-bottom: 10px;
+    }
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <h2>Birthday Wishes Card</h2>
+    <div class="input-field">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+    </div>
+    <div class="input-field">
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate">
+    </div>
+    <button class="button" onclick="displayBirthdayMessage()">Send Wishes</button>
+</div>
+
+<script>
+function calculateAge(birthDate) {
+    var today = new Date();
+    var birthDate = new Date(birthDate);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+function displayBirthdayMessage() {
+    var name = document.getElementById("name").value;
+    var birthDate = document.getElementById("birthdate").value;
+    var age = calculateAge(birthDate);
+    var birthdayMessage = "Happy " + age + "th Birthday, " + name + "!";
+    alert(birthdayMessage);
+}
+</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Birthday  Wishes </title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+    }
+    video {
+        width: 400px;
+        height: auto;
+    }
+    .birthday-message {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <video controls>
+        <source src="css2\WhatsApp Video 2024-03-31 at 17.09.07_e1d2a6c6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="birthday-message">
+        <h2>Birthday Wishes Video</h2>
+        <p>Happy Birthday! Lucky</p>
+        <!-- Additional birthday message or interactive elements can be added here -->
+    </div>
+</div>
+
+<script>
+// JavaScript code can be added here for additional interactivity or functionality
+</script>
+</body>
+</html>

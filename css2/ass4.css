@@ -1,0 +1,38 @@
+  #box1 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: width 2s ease-in 0.5s;
+
+  }
+   #box1:hover {
+    width: 600px;
+   }
+ #box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: translate(200px,200px) rotate(90deg);
+ }
+   #box3 {
+   width: 100px;
+   height: 100px;
+   background-color: lightblue;
+   transform: skewX(20deg);
+   }
+    #box4 {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+      box-shadow: 2px 2px 5px green;
+
+    }
+     #mypic {
+     width: 100px;
+     height: 100px;
+     background-color: pink;
+     background-image: url(\classroom\WhatsApp Image 2023-12-31 at 05.44.23_f0e72d59.jpg);
+     background-size:cover;
+     opacity: 50%;
+     border-radius: 5px 5px 0 0 ;
+     }

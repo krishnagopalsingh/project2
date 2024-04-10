@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Search</title>
+</head>
+<body>
+    <input type="text" id="stateInput" placeholder="Enter state">
+    <button id="searchBtn">Search</button>
+    <ul id="list"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const url = "http://universities.hipolabs.com/search?state=";
+        const btn = document.querySelector("#searchBtn");
+
+        btn.addEventListener("click", async () => {
+            try {
+                const state = document.querySelector("#stateInput").value;
+                console.log(state);
+                let colArr = await getColleges(state);
+                show(colArr);
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        });
+
+        function show(colArr) {
+            let list = document.querySelector("#list");
+            list.innerHTML = ""; // Clear previous results
+            for (col of colArr) {
+                console.log(col.name);
+                let li = document.createElement("li");
+                li.innerText = `${col.name} - ${col.state}`; // Display college name and state
+                list.appendChild(li);
+            }
+        }
+
+        async function getColleges(state) {
+            try {
+                const res = await axios.get(url + state);
+                return res.data;
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+    </script>
+</body>
+</html>
+      
+
+   <button>Submit </button>
+
+   <button>login</button>
+   <button>sign-in</button>
+   <button>sign-up</button>
+   <level>create a folder </level>
+
+   <input id="text" ><input/>
